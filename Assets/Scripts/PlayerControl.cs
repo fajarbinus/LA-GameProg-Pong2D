@@ -26,7 +26,6 @@ public class PlayerControl : MonoBehaviour
     }
 
 
-
     void LimitPos()
     {
         var pos = transform.position;

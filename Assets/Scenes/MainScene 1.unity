@@ -1004,7 +1004,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538809601}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 7.5487, y: 0.19, z: 0}
+  m_LocalPosition: {x: 7.55, y: -3.6, z: 0}
   m_LocalScale: {x: 7.0005717, y: 7.0005717, z: 7.0005717}
   m_Children:
   - {fileID: 1602546875}
@@ -1036,14 +1036,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1538809601}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f050ccec8e704ca4da6d898a71bd5964, type: 3}
+  m_Script: {fileID: 11500000, guid: b7dcd0abe9e8ae247939fc187262273f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb2d: {fileID: 0}
-  moveUp: 273
-  moveDown: 274
-  speed: 10
-  boundY: 3.7
+  ball: {fileID: 1686558071}
+  move: 0
+  speed: 0
+  up: {x: 7.55, y: 3.5}
+  down: {x: 7.55, y: -3.5}
 --- !u!50 &1538809606
 Rigidbody2D:
   serializedVersion: 4
