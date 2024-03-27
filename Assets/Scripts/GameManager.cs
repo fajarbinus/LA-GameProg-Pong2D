@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public SceneHandler sceneHandler;
+    public GameObject panelWin;
+    public string strPlayerL,strPlayerR;
+    public TMP_Text UIPlayerWin;
+
     public int PlayerScoreL;
     public int PlayerScoreR;
 
@@ -35,13 +40,41 @@ public class GameManager : MonoBehaviour
         {
             PlayerScoreR = PlayerScoreR + 10;
             UIPlayerScoreR.text = PlayerScoreR.ToString();
+            ScoreCheck();
         }
         else 
         {
             PlayerScoreL = PlayerScoreL + 10;
             UIPlayerScoreL.text = PlayerScoreL.ToString();
+            ScoreCheck();
         }
         
+    }
+
+
+ 
+
+    private void ChangeSceneToMenu()
+    {
+        sceneHandler.ChangeSceneTo("Menu");
+    }
+
+    public void ScoreCheck()
+    {
+        if (PlayerScoreL == 20)
+        {
+            Debug.Log("Player L Win!");
+            UIPlayerWin.text = strPlayerL;
+            panelWin.SetActive(true);
+            Invoke("ChangeSceneToMenu",2f);
+        }
+        else if (PlayerScoreR == 20)
+        {
+            Debug.Log("Player R Win!");
+            UIPlayerWin.text = strPlayerR;
+            panelWin.SetActive(true);
+            Invoke("ChangeSceneToMenu",2f);
+        }
     }
 
 
